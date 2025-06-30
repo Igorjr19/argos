@@ -2,9 +2,14 @@
   "name": "@argos/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky",
+    "commitlint": "commitlint --edit"
+  },
   "private": true,
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.8.0",
     "@nestjs/schematics": "^11.0.0",
     "@nestjs/testing": "^11.0.0",
@@ -33,6 +38,7 @@
     "@vitejs/plugin-react": "^4.2.0",
     "@vitest/ui": "^3.0.0",
     "babel-jest": "^29.7.0",
+    "commitlint": "^19.8.1",
     "cypress": "^14.2.1",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^10.0.0",
@@ -41,11 +47,13 @@
     "eslint-plugin-jsx-a11y": "6.10.1",
     "eslint-plugin-react": "7.35.0",
     "eslint-plugin-react-hooks": "5.0.0",
+    "husky": "^9.1.7",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-environment-node": "^29.7.0",
     "jiti": "2.4.2",
     "jsdom": "~22.1.0",
+    "lint-staged": "^16.1.2",
     "nx": "21.2.1",
     "prettier": "^2.6.2",
     "ts-jest": "^29.1.0",
@@ -67,5 +75,13 @@
     "react-router-dom": "6.29.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,js,jsx,html,json,css,scss}": [
+      "prettier --write --ignore-unknown"
+    ],
+    "**/*.{ts,tsx,js,jsx}": [
+      "eslint --fix"
+    ]
   }
 }
