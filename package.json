@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "prepare": "husky",
-    "commitlint": "commitlint --edit"
+    "commitlint": "commitlint --edit",
+    "commit": "cz"
   },
   "private": true,
   "devDependencies": {
@@ -38,8 +39,10 @@
     "@vitejs/plugin-react": "^4.2.0",
     "@vitest/ui": "^3.0.0",
     "babel-jest": "^29.7.0",
+    "commitizen": "^4.3.1",
     "commitlint": "^19.8.1",
     "cypress": "^14.2.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-cypress": "^3.5.0",
